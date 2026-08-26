@@ -1,0 +1,185 @@
+/* Galilou — feuille de style commune
+   Reprend la typographie (Nunito) et la palette violette de l'application. */
+
+:root {
+  --violet:        #6E56CF;
+  --violet-fonce:  #4A3A8C;
+  --violet-clair:  #F1EDFC;
+  --encre:         #211C33;
+  --gris:          #5C5670;
+  --gris-clair:    #E4E0F0;
+  --fond:          #FAF9FE;
+  --blanc:         #FFFFFF;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--encre);
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.bandeau {
+  background: var(--blanc);
+  border-bottom: 1px solid var(--gris-clair);
+}
+
+.bandeau .contenu {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+}
+
+.marque {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--violet);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.bandeau nav {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.95rem;
+}
+
+.bandeau nav a {
+  color: var(--gris);
+  text-decoration: none;
+}
+
+.bandeau nav a:hover,
+.bandeau nav a:focus-visible { color: var(--violet); text-decoration: underline; }
+
+.contenu {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+main.contenu {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+h1 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1.35;
+  margin: 2.75rem 0 0.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--gris-clair);
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 1.75rem 0 0.5rem;
+}
+
+p { margin: 0 0 1rem; }
+
+a { color: var(--violet-fonce); }
+
+.chapeau {
+  color: var(--gris);
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.date {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--violet-fonce);
+  background: var(--violet-clair);
+  border-radius: 999px;
+  padding: 0.25rem 0.85rem;
+  margin-bottom: 2.5rem;
+}
+
+ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+li { margin-bottom: 0.5rem; }
+
+.encadre {
+  background: var(--violet-clair);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.encadre p:last-child { margin-bottom: 0; }
+
+.contact {
+  background: var(--blanc);
+  border: 1px solid var(--gris-clair);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.contact p:last-child { margin-bottom: 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.7rem 0.9rem 0.7rem 0;
+  border-bottom: 1px solid var(--gris-clair);
+}
+
+th {
+  font-weight: 700;
+  color: var(--gris);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+footer {
+  border-top: 1px solid var(--gris-clair);
+  background: var(--blanc);
+  color: var(--gris);
+  font-size: 0.9rem;
+}
+
+footer .contenu {
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+footer a { color: var(--gris); }
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  h1 { font-size: 1.7rem; }
+  main.contenu { padding-top: 2rem; }
+}
