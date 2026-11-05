@@ -166,8 +166,26 @@
 
 <p><em>Galilou transforme la liste de mots en vraie dictée lue à voix haute, du CE2 à la 4e. <a href="https://apps.apple.com/app/apple-store/id6800422398?pt=123491687&amp;ct=article-4&amp;mt=8">Disponible sur iPhone</a>.</em></p>
 
-<!-- ligne Android (décision D14 du 20 oct. : OUI) : à supprimer le jour où Android est en vente -->
-<p><em>Vous êtes sur Android ? <a href="https://docs.google.com/forms/d/e/1FAIpQLSd6Enz-XzyMihknQez46zpaFBJrGY4rhkXU1Q1qsjeaNFgImw/viewform">Devenez testeur</a>, on vous prévient à l'ouverture du test.</em></p>
+<!-- bloc Android (D14 du 20 oct. ; liste d'attente GAL-280) : à remplacer par le lien Google Play le jour où Android est en vente -->
+<section id="android" class="attente" aria-labelledby="attente-titre">
+  <h2 id="attente-titre">Prévenez-moi à la sortie sur Android</h2>
+  <p>Vous êtes sur Android ? Galilou y arrive bientôt. Laissez votre adresse : nous vous écrirons le jour de la sortie.</p>
+  <form class="attente-form" data-attente-android action="https://vaunrwazcljnerpwvlqd.supabase.co/functions/v1/android-waitlist" method="post">
+    <label for="attente-email">Votre adresse e-mail</label>
+    <div class="attente-ligne">
+      <input id="attente-email" name="email" type="email" required autocomplete="email" maxlength="254" placeholder="prenom@exemple.fr">
+      <button class="bouton" type="submit">Me prévenir</button>
+    </div>
+    <label class="attente-case"><input type="checkbox" name="wants_news"> Recevoir aussi les nouveautés de Galilou</label>
+    <div class="attente-piege" aria-hidden="true">
+      <label for="attente-site">Laissez ce champ vide</label>
+      <input id="attente-site" name="website" type="text" tabindex="-1" autocomplete="off">
+    </div>
+    <p class="attente-message" role="status" aria-live="polite"></p>
+    <p class="attente-note">Pas de publicité, pas de traceur, désinscription en un clic. <a href="confidentialite.html#liste-attente-android">Ce que nous faisons de votre adresse</a>.</p>
+  </form>
+  <p class="attente-note">Envie d'essayer Galilou avant tout le monde ? <a href="https://docs.google.com/forms/d/e/1FAIpQLSd6Enz-XzyMihknQez46zpaFBJrGY4rhkXU1Q1qsjeaNFgImw/viewform" rel="noopener">Devenez testeur Android</a>.</p>
+</section>
 
 <h2>Questions fréquentes</h2>
 
@@ -195,5 +213,6 @@
   </div>
 </footer>
 
+<script src="waitlist.js" defer></script>
 </body>
 </html>
