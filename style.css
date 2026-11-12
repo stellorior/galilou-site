@@ -160,6 +160,8 @@ li { margin-bottom: 0.5rem; }
 
 .encadre p:last-child { margin-bottom: 0; }
 
+.encadre h2 { margin-top: 0; padding-top: 0; border-top: 0; }
+
 .contact {
   background: var(--blanc);
   border: 1px solid var(--gris-clair);
