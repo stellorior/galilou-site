@@ -194,6 +194,30 @@ th {
   letter-spacing: 0.04em;
 }
 
+/* Listes prêtes (listes/, GAL-294) */
+.fil {
+  font-size: 0.9rem;
+  color: var(--gris);
+  margin-bottom: 1.25rem;
+}
+
+.mots {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.mots li {
+  margin: 0;
+  background: var(--blanc);
+  border: 1px solid var(--gris-clair);
+  border-radius: 999px;
+  padding: 0.2rem 0.9rem;
+  font-weight: 700;
+}
+
 footer {
   border-top: 1px solid var(--gris-clair);
   background: var(--blanc);
