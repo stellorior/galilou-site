@@ -208,6 +208,109 @@ footer .contenu {
 
 footer a { color: var(--gris); }
 
+/* Formulaire « Prévenez-moi à la sortie sur Android » (accueil et articles) */
+
+.attente {
+  background: var(--violet-clair);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+}
+
+.attente h2 {
+  margin: 0 0 0.5rem;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.attente p { margin-bottom: 0.9rem; }
+
+.attente-form label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.attente-ligne {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.attente-ligne input {
+  flex: 1 1 14rem;
+  min-width: 0;
+  font: inherit;
+  color: var(--encre);
+  background: var(--blanc);
+  border: 2px solid var(--gris-clair);
+  border-radius: 12px;
+  padding: 0.65rem 0.9rem;
+}
+
+.attente-ligne input:focus-visible {
+  outline: 3px solid var(--violet);
+  outline-offset: 1px;
+  border-color: var(--violet);
+}
+
+.attente-ligne input[aria-invalid="true"] { border-color: #B3261E; }
+
+.attente-ligne .bouton {
+  flex: 0 0 auto;
+  border: 0;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.attente-ligne .bouton:disabled { opacity: 0.6; cursor: default; }
+
+.attente-form .attente-case {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  font-weight: 400;
+  margin: 0.8rem 0 0;
+  cursor: pointer;
+}
+
+.attente-case input {
+  flex: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0.25rem 0 0;
+  accent-color: var(--violet);
+}
+
+.attente-piege {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.attente-message {
+  margin: 0.8rem 0 0;
+  font-weight: 700;
+}
+
+.attente-message:empty { margin: 0; }
+.attente-ok { color: #1E6B3A; }
+.attente-erreur { color: #B3261E; }
+
+.attente .attente-note {
+  font-size: 0.9rem;
+  color: var(--gris);
+  margin: 0.8rem 0 0;
+}
+
+@media (max-width: 480px) {
+  .attente { padding: 1.1rem 1.1rem; }
+  .attente-ligne .bouton { width: 100%; }
+}
+
 @media (max-width: 640px) {
   body { font-size: 16px; }
   h1 { font-size: 1.7rem; }

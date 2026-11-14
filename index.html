@@ -136,10 +136,25 @@
       <p>Galilou est un outil de la maison : la liste reste celle de la classe, l'application ne fait que la transformer en dictée pour s'entraîner.</p>
     </section>
 
-    <section id="android" class="lp-box">
-      <h2>Vous avez un téléphone Android ? Devenez testeur de Galilou</h2>
-      <p>Inscrivez-vous en une minute pour tester l'application avant sa sortie. On vous prévient à l'ouverture du test.</p>
-      <p><a class="lp-button" href="https://docs.google.com/forms/d/e/1FAIpQLSd6Enz-XzyMihknQez46zpaFBJrGY4rhkXU1Q1qsjeaNFgImw/viewform" rel="noopener">Devenir testeur Android</a></p>
+    <!-- GAL-280 : liste d'attente Android. Le lien testeur (formulaire Google) reste en lien secondaire jusqu'à la fin du test. -->
+    <section id="android" class="attente" aria-labelledby="attente-titre">
+      <h2 id="attente-titre">Prévenez-moi à la sortie sur Android</h2>
+      <p>Galilou arrive bientôt sur Android. Laissez votre adresse : nous vous écrirons le jour de la sortie.</p>
+      <form class="attente-form" data-attente-android action="https://vaunrwazcljnerpwvlqd.supabase.co/functions/v1/android-waitlist" method="post">
+        <label for="attente-email">Votre adresse e-mail</label>
+        <div class="attente-ligne">
+          <input id="attente-email" name="email" type="email" required autocomplete="email" maxlength="254" placeholder="prenom@exemple.fr">
+          <button class="bouton" type="submit">Me prévenir</button>
+        </div>
+        <label class="attente-case"><input type="checkbox" name="wants_news"> Recevoir aussi les nouveautés de Galilou</label>
+        <div class="attente-piege" aria-hidden="true">
+          <label for="attente-site">Laissez ce champ vide</label>
+          <input id="attente-site" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <p class="attente-message" role="status" aria-live="polite"></p>
+        <p class="attente-note">Pas de publicité, pas de traceur, désinscription en un clic. <a href="confidentialite.html#liste-attente-android">Ce que nous faisons de votre adresse</a>.</p>
+      </form>
+      <p class="attente-note">Envie d'essayer Galilou avant tout le monde ? <a href="https://docs.google.com/forms/d/e/1FAIpQLSd6Enz-XzyMihknQez46zpaFBJrGY4rhkXU1Q1qsjeaNFgImw/viewform" rel="noopener">Devenez testeur Android</a>.</p>
     </section>
 
     <section id="donnees">
@@ -158,6 +173,7 @@
       <p>Galilou — <a href="support.html">Aide</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="mailto:hello@galilou.com">hello@galilou.com</a></p>
     </div>
   </footer>
+  <script src="waitlist.js" defer></script>
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ce9cb9d9a84149d9b248396721c0004e"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
